@@ -1,0 +1,49 @@
+#used for real DB conditions
+es_source cscConditions = PoolDBESSource  
+{ 
+    VPSet toGet = {
+	{ string record = "CSCGainsRcd"
+          string tag = "CSCGains_from_online"},
+        {string record = "CSCNoiseMatrixRcd"
+          string tag = "CSCNoiseMatrix_from_online"},
+        {string record = "CSCcrosstalkRcd"
+          string tag = "CSCcrosstalk_from_online"}
+#        {string record = "CSCPedestalsRcd"
+#	 string tag = "CSCPedestals_from_online"} 
+     }
+
+    string connect = "oracle://devdb10/cms_alct"
+    untracked uint32 authenticationMethod = 0
+    string timetype = "runnumber"
+    untracked uint32 messagelevel = 0 
+}
+
+
+#used for fake conditions (?)
+es_source src2 = CSCFakeConditions 
+{
+    untracked bool CSCFakeGains = true
+    untracked bool CSCFakeNoiseMatrix = true
+    untracked bool CSCFakeCrosstalk = true
+#    untracked bool CSCFakePedestals = true
+}
+
+module getCSCConditions_frontier = EventSetupRecordDataGetter 
+{ 
+    VPSet toGet = {
+	{ string record = "CSCGainsRcd"
+	    vstring data = {"CSCGains"}
+	},
+        { string record = "CSCNoiseMatrixRcd"
+	    vstring data = {"CSCNoiseMatrix"}
+	},
+        { string record = "CSCCrosstalkRcd"
+	    vstring data = {"CSCcrosstalk"}
+	}
+#        { string record = "CSCPedestalsRcd"
+#	    vstring data = {"CSCPedestals"}
+#	 }
+
+    }
+                   untracked bool verbose = true 
+} 	
