@@ -8,8 +8,8 @@ es_source cscConditions = PoolDBESSource
           string tag = "CSCNoiseMatrix_from_online"},
         {string record = "CSCcrosstalkRcd"
           string tag = "CSCcrosstalk_from_online"}
-#        {string record = "CSCPedestalsRcd"
-#	 string tag = "CSCPedestals_from_online"} 
+        {string record = "CSCPedestalsRcd"
+	 string tag = "CSCPedestals_from_online"} 
      }
 
     string connect = "oracle://devdb10/cms_alct"
@@ -25,7 +25,7 @@ es_source src2 = CSCFakeConditions
     untracked bool CSCFakeGains = true
     untracked bool CSCFakeNoiseMatrix = true
     untracked bool CSCFakeCrosstalk = true
-#    untracked bool CSCFakePedestals = true
+    untracked bool CSCFakePedestals = true
 }
 
 module getCSCConditions_frontier = EventSetupRecordDataGetter 
@@ -40,9 +40,9 @@ module getCSCConditions_frontier = EventSetupRecordDataGetter
         { string record = "CSCCrosstalkRcd"
 	    vstring data = {"CSCcrosstalk"}
 	}
-#        { string record = "CSCPedestalsRcd"
-#	    vstring data = {"CSCPedestals"}
-#	 }
+        { string record = "CSCPedestalsRcd"
+	    vstring data = {"CSCPedestals"}
+	 }
 
     }
                    untracked bool verbose = true 
