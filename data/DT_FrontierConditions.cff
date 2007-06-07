@@ -4,3 +4,4 @@
 
 include "CalibMuon/DTCalibration/data/DT_Calibration_CSA07.cfi"
 
+replace  DTParametrizedDriftAlgo_CSA07.recAlgoConfig.tTrigModeConfig.doT0Correction = true
