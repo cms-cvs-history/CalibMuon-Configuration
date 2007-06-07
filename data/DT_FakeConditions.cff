@@ -1,0 +1,6 @@
+#
+#DT fake calibrations
+#
+
+include "CalibMuon/DTCalibration/data/DTFakeTTrigESProducer.cfi"
+#include "CalibMuon/DTCalibration/data/DTFakeT0ESProducer.cfi"
