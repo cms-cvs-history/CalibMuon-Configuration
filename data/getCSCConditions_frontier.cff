@@ -1,52 +1,56 @@
 #used for real DB conditions
+  include "CondCore/DBCommon/data/CondDBSetup.cfi"
+
 es_source cscConditions = PoolDBESSource  
 { 
+    using CondDBSetup
     VPSet toGet = {
 	{ string record = "CSCGainsRcd"
           string tag = "CSCGains_ideal"},
         {string record = "CSCNoiseMatrixRcd"
           string tag = "CSCNoiseMatrix_ideal"},
         {string record = "CSCcrosstalkRcd"
-          string tag = "CSCCrosstalk_ideal"}
+          string tag = "CSCCrosstalk_ideal"},
         {string record = "CSCPedestalsRcd"
 	 string tag = "CSCPedestals_ideal"} 
      }
 
-    string connect = "oracle://cms_orcoff_int2r/CMS_COND_CSC"
-    PSet DBParameters = {
-			  untracked string authenticationPath="/afs/cern.ch/cms/DB/conddb"
-    }
-    #untracked uint32 authenticationMethod = 0
+    string connect = "frontier://FrontierDev/CMS_COND_ALIGNMENT"
+    untracked bool siteLocalConfig = true
     string timetype = "runnumber"
-    untracked uint32 messagelevel = 0 
+    # string connect = "oracle://cms_orcoff_int2r/CMS_COND_CSC"
+    #PSet DBParameters = {
+    #		  untracked string authenticationPath="/afs/cern.ch/cms/DB/conddb"}
+    #untracked uint32 authenticationMethod = 0
+    #untracked uint32 messagelevel = 0 
 }
 
 
 #used for fake conditions (?)
-es_source src2 = CSCFakeConditions 
-{
-    untracked bool CSCFakeGains = true
-    untracked bool CSCFakeNoiseMatrix = true
-    untracked bool CSCFakeCrosstalk = true
-    untracked bool CSCFakePedestals = true
-}
-
-module getCSCConditions_frontier = EventSetupRecordDataGetter 
-{ 
-    VPSet toGet = {
-	{ string record = "CSCGainsRcd"
-	    vstring data = {"CSCGains"}
-	},
-        { string record = "CSCNoiseMatrixRcd"
-	    vstring data = {"CSCNoiseMatrix"}
-	},
-        { string record = "CSCCrosstalkRcd"
-	    vstring data = {"CSCcrosstalk"}
-	}
-        { string record = "CSCPedestalsRcd"
-	    vstring data = {"CSCPedestals"}
-	 }
-
-    }
-                   untracked bool verbose = true 
-} 	
+#es_source src2 = CSCFakeConditions 
+#{
+#    untracked bool CSCFakeGains = true
+#    untracked bool CSCFakeNoiseMatrix = true
+#    untracked bool CSCFakeCrosstalk = true
+#    untracked bool CSCFakePedestals = true
+#}
+#
+#module getCSCConditions_frontier = EventSetupRecordDataGetter 
+#{ 
+#    VPSet toGet = {
+#	{ string record = "CSCGainsRcd"
+#	    vstring data = {"CSCGains"}
+#	},
+#        { string record = "CSCNoiseMatrixRcd"
+#	    vstring data = {"CSCNoiseMatrix"}
+#	},
+#        { string record = "CSCCrosstalkRcd"
+#	    vstring data = {"CSCcrosstalk"}
+#	}
+#        { string record = "CSCPedestalsRcd"
+#	    vstring data = {"CSCPedestals"}
+#	 }
+#
+#    }
+#                   untracked bool verbose = true 
+#} 	

@@ -6,4 +6,4 @@
 include "CalibMuon/DTCalibration/data/DTFakeTTrigESProducer.cfi"
 #include "CalibMuon/DTCalibration/data/DTFakeT0ESProducer.cfi"
 
-replace  DTParametrizedDriftAlgo_CSA07.recAlgoConfig.tTrigModeConfig.doT0Correction = false
+#replace  DTParametrizedDriftAlgo_CSA07.recAlgoConfig.tTrigModeConfig.doT0Correction = false
