@@ -11,7 +11,7 @@
          { string record = "CSCAlignmentRcd"          string tag = "CSCIdealGeometry150" },
          { string record = "CSCAlignmentErrorRcd"     string tag = "CSCIdealGeometryErrors150" }
        }
-    }
+    
 
     # FRONTIER
     string connect="frontier://FrontierDev/CMS_COND_ALIGNMENT"
