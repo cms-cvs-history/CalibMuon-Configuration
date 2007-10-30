@@ -1,3 +1,5 @@
-#lignment producer (does not actually put data in the ES!)
-include "Alignment/CommonAlignmentProducer/data/fakeAlignmentProducer.cfi"
+#just to keep same structure as others
+
+include "CalibMuon/Configuration/data/Muon_FakeAlignment.cfi"
+
 

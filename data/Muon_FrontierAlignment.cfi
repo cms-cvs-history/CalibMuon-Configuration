@@ -1,0 +1,34 @@
+#
+# take alignment from Frontier
+#
+  include "CondCore/DBCommon/data/CondDBSetup.cfi"
+
+  es_source muonAlignment = PoolDBESSource { 
+    using CondDBSetup
+    VPSet toGet = {
+         { string record = "DTAlignmentRcd"           string tag = "DTIdealGeometry150" },
+         { string record = "DTAlignmentErrorRcd"      string tag = "DTIdealGeometryErrors150" },
+         { string record = "CSCAlignmentRcd"          string tag = "CSCIdealGeometry150" },
+         { string record = "CSCAlignmentErrorRcd"     string tag = "CSCIdealGeometryErrors150" }
+       }
+    }
+
+    # FRONTIER
+    string connect="frontier://FrontierDev/CMS_COND_ALIGNMENT"
+
+    # ORACLE
+    #string connect = "oracle://cms_orcoff_int2r/CMS_COND_ALIGNMENT"
+    #untracked string catalog = "relationalcatalog_oracle://cms_orcoff_int2r/CMS_COND_GENERAL"
+
+    untracked uint32 authenticationMethod = 1
+    string timetype = "runnumber"
+    untracked uint32 messagelevel = 0
+  }
+
+  es_prefer muonAlignment = PoolDBESSource {}
+
+# to apply misalignments
+  replace DTGeometryESModule.applyAlignment = true
+  replace CSCGeometryESModule.applyAlignment = true  
+
+
