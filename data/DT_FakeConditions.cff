@@ -4,6 +4,5 @@
 #(the replace should be moved to main cfg in order to avoid warning message)
 
 include "CalibMuon/DTCalibration/data/DTFakeTTrigESProducer.cfi"
-#include "CalibMuon/DTCalibration/data/DTFakeT0ESProducer.cfi"
+include "CalibMuon/DTCalibration/data/DTFakeT0ESProducer.cfi"
 
-#replace  DTParametrizedDriftAlgo_CSA07.recAlgoConfig.tTrigModeConfig.doT0Correction = false
