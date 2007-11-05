@@ -1,6 +1,6 @@
 include "CalibMuon/Configuration/data/getCSCDBConditions_frontier.cff"
 
-replace cscConditions.connect="frontier://FrontierDev/CMS_COND_CSC"
+replace cscConditions.connect="frontier://cms_conditions_data/CMS_COND_17X_CSC"
 replace cscConditions.toGet = {
 	{ string record = "CSCDBGainsRcd"
           string tag = "CSCDBGains_ideal"},
