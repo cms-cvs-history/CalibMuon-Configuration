@@ -1,0 +1,13 @@
+include "CalibMuon/Configuration/data/getCSCDBConditions_frontier.cff"
+
+replace cscConditions.connect="frontier://FrontierDev/CMS_COND_CSC"
+replace cscConditions.toGet = {
+	{ string record = "CSCDBGainsRcd"
+          string tag = "CSCDBGains_ideal"},
+        {string record = "CSCDBNoiseMatrixRcd"
+          string tag = "CSCDBNoiseMatrix_ideal"},
+        {string record = "CSCDBCrosstalkRcd"
+          string tag = "CSCDBCrosstalk_ideal"},
+        {string record = "CSCDBPedestalsRcd"
+	 string tag = "CSCDBPedestals_ideal"} 
+     }

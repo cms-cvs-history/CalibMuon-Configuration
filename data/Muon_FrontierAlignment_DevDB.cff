@@ -1,0 +1,4 @@
+#just to keep same structure as others
+
+include "CalibMuon/Configuration/data/Muon_FrontierAlignment.cfi"
+
