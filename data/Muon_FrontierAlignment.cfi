@@ -6,10 +6,10 @@ include "CondCore/DBCommon/data/CondDBSetup.cfi"
 es_source muonAlignment = PoolDBESSource { 
     using CondDBSetup
     VPSet toGet = {
-        { string record = "DTAlignmentRcd"           string tag = "DTIdealGeometry150" },
-        { string record = "DTAlignmentErrorRcd"      string tag = "DTIdealGeometryErrors150" },
-        { string record = "CSCAlignmentRcd"          string tag = "CSCIdealGeometry150" },
-        { string record = "CSCAlignmentErrorRcd"     string tag = "CSCIdealGeometryErrors150" }
+        { string record = "DTAlignmentRcd"           string tag = "DTIdealGeometry170" },
+        { string record = "DTAlignmentErrorRcd"      string tag = "DTIdealGeometryErrors170" },
+        { string record = "CSCAlignmentRcd"          string tag = "CSCIdealGeometry170" },
+        { string record = "CSCAlignmentErrorRcd"     string tag = "CSCIdealGeometryErrors170" }
     }
     string timetype = "runnumber"
     
