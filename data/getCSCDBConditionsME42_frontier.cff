@@ -1,0 +1,23 @@
+#used for real DB conditions
+  include "CondCore/DBCommon/data/CondDBSetup.cfi"
+
+es_source cscConditions = PoolDBESSource  
+{ 
+    using CondDBSetup
+    VPSet toGet = {
+	{ string record = "CSCDBGainsRcd"
+          string tag = "CSCDBGains_test"},
+        {string record = "CSCDBNoiseMatrixRcd"
+          string tag = "CSCDBNoiseMatrix_test"},
+        {string record = "CSCDBCrosstalkRcd"
+          string tag = "CSCDBCrosstalk_test"},
+        {string record = "CSCDBPedestalsRcd"
+	 string tag = "CSCDBPedestals_test"} 
+     }
+
+    string connect = "frontier://FrontierDev/CMS_COND_ALIGNMENT"
+    untracked bool siteLocalConfig = true
+    string timetype = "runnumber"
+     
+
+}
