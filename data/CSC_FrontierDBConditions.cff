@@ -9,5 +9,13 @@ replace cscConditions.toGet = {
         {string record = "CSCDBCrosstalkRcd"
           string tag = "CSCDBCrosstalk_ideal"},
         {string record = "CSCDBPedestalsRcd"
-	 string tag = "CSCDBPedestals_ideal"} 
+	 string tag = "CSCDBPedestals_ideal"}, 
+	{ string record = "CSCChamberIndexRcd"
+          string tag = "CSCChamberIndex"},
+	{ string record = "CSCChamberMapRcd"
+          string tag = "CSCChamberMap"},
+	{ string record = "CSCCrateMapRcd"
+          string tag = "CSCCrateMap"},
+	{ string record = "CSCDDUMapRcd"
+          string tag = "CSCDDUMap"}
      }
