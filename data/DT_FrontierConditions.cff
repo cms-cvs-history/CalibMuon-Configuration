@@ -3,8 +3,8 @@
 #For now, no t0 corrections are applied in the reconstruction if fake calibration is used
 #(the replace should be moved to main cfg in order to avoid warning message)
 
-include "CalibMuon/DTCalibration/data/DT_Calibration.cff"
-replace maps_frontier.connect="frontier://cms_conditions_data/CMS_COND_17X_DT"
+include "CalibMuon/DTCalibration/data/DT_Calibration_CSA07.cfi"
+replace maps_frontier.connect="frontier://Frontier/CMS_COND_17X_DT"
 replace maps_frontier.toGet = {{string record = "DTT0Rcd" 
                                 string tag = "t0FakeCSA07_Sept15" },
                                {string record = "DTTtrigRcd"
