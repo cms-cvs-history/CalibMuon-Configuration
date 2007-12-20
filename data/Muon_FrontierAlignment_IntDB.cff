@@ -1,5 +1,5 @@
 #just to keep same structure as others
 
 include "CalibMuon/Configuration/data/Muon_FrontierAlignment.cfi"
-replace muonAlignment.connect="frontier://cms_conditions_data/CMS_COND_17X_ALIGNMENT"
+replace muonAlignment.connect="frontier://cms_conditions_data/CMS_COND_18X_ALIGNMENT"
 

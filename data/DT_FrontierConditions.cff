@@ -4,10 +4,10 @@
 #(the replace should be moved to main cfg in order to avoid warning message)
 
 include "CalibMuon/DTCalibration/data/DT_Calibration.cff"
-replace maps_frontier.connect="frontier://cms_conditions_data/CMS_COND_17X_DT"
+replace maps_frontier.connect="frontier://Frontier/CMS_COND_18X_DT"
 replace maps_frontier.toGet = {{string record = "DTT0Rcd" 
-                                string tag = "t0FakeCSA07_Sept15" },
+                                string tag = "t0Fake_18X_Sept15" },
                                {string record = "DTTtrigRcd"
-                                string tag ="ttrigFakeCSA07_July17"}}
+                                string tag ="ttrigFake_18X_July17"}}
 
 #replace  DTParametrizedDriftAlgo_CSA07.recAlgoConfig.tTrigModeConfig.doT0Correction = true

@@ -1,6 +1,6 @@
 include "CalibMuon/Configuration/data/getCSCDBConditions_frontier.cff"
 
-replace cscConditions.connect="frontier://cms_conditions_data/CMS_COND_17X_CSC"
+replace cscConditions.connect="frontier://Frontier/CMS_COND_18X_CSC"
 replace cscConditions.toGet = {
 	{ string record = "CSCDBGainsRcd"
           string tag = "CSCDBGains_ideal"},
@@ -9,13 +9,13 @@ replace cscConditions.toGet = {
         {string record = "CSCDBCrosstalkRcd"
           string tag = "CSCDBCrosstalk_ideal"},
         {string record = "CSCDBPedestalsRcd"
-	 string tag = "CSCDBPedestals_ideal"}, 
+	 string tag = "CSCDBPedestals_ideal"},
 	{ string record = "CSCChamberIndexRcd"
           string tag = "CSCChamberIndex"},
-	{ string record = "CSCChamberMapRcd"
-          string tag = "CSCChamberMap"},
-	{ string record = "CSCCrateMapRcd"
-          string tag = "CSCCrateMap"},
+#	{ string record = "CSCChamberMapRcd"
+#          string tag = "CSCChamberMap"},
+#	{ string record = "CSCCrateMapRcd"
+#          string tag = "CSCCrateMap"},
 	{ string record = "CSCDDUMapRcd"
           string tag = "CSCDDUMap"}
      }
