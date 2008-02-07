@@ -2,6 +2,9 @@
 # Take muon alignment corrections from Frontier
 #
 include "CondCore/DBCommon/data/CondDBSetup.cfi"
+include "Geometry/DTGeometry/data/dtGeometry.cfi"
+include "Geometry/CSCGeometry/data/cscGeometry.cfi"
+
 
 es_source muonAlignment = PoolDBESSource { 
     using CondDBSetup
