@@ -1,5 +1,41 @@
-#just to keep same structure as others
+#
+# Once the FakeAlignmentProducer is an ESSource and not only an ESProducer,
+# all the following should in future be replaced by a simple
+# include "Alignment/CommonAlignmentProducer/data/fakeAlignmentProducer.cff" # or cfi?
+#
 
-include "CalibMuon/Configuration/data/Muon_FakeAlignment.cfi"
+# Producer module
+# ===============
+# Dummy alignment producer (creating empty Aligments and AlignmentErrors)
+include "Alignment/CommonAlignmentProducer/data/fakeAlignmentProducer.cfi"
+
+# Sources that actually put the records into ESetup
+# (Here with unlimited IOV, taken from producer above.)
+# =====================================================
+# global position
+include "Alignment/CommonAlignmentProducer/data/fakeGlobalPositionSource.cfi"
+# DT with errors
+es_source fakeDTAlignmentSource = EmptyESSource {
+    string recordName = "DTAlignmentRcd"
+    vuint32 firstValid = {1}
+    bool iovIsRunNotTime = true
+}
+es_source fakeDTAlignmentErrorSource = EmptyESSource {
+    string recordName = "DTAlignmentErrorRcd"
+    vuint32 firstValid = {1}
+    bool iovIsRunNotTime = true
+}
+# CSC with errors
+es_source fakeCSCAlignmentSource = EmptyESSource {
+    string recordName = "CSCAlignmentRcd"
+    vuint32 firstValid = {1}
+    bool iovIsRunNotTime = true
+}
+es_source fakeCSCAlignmentErrorSource = EmptyESSource {
+    string recordName = "CSCAlignmentErrorRcd"
+    vuint32 firstValid = {1}
+    bool iovIsRunNotTime = true
+}
+# nothing yet for RPC
 
 
