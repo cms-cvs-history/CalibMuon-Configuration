@@ -1,4 +1,5 @@
-#just to keep same structure as others
+# FIXME: GlobalPosition_Frontier_IntDB.cff does not (yet) exist
+include "Alignment/CommonAlignmentProducer/data/GlobalPosition_Frontier_IntDB.cff"
 
 include "CalibMuon/Configuration/data/Muon_FrontierAlignment.cfi"
 replace muonAlignment.connect="frontier://cms_conditions_data/CMS_COND_18X_ALIGNMENT"
