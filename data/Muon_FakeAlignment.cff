@@ -13,7 +13,7 @@ include "Alignment/CommonAlignmentProducer/data/fakeAlignmentProducer.cfi"
 # (Here with unlimited IOV, taken from producer above.)
 # =====================================================
 # global position
-include "Alignment/CommonAlignmentProducer/data/fakeGlobalPositionSource.cfi"
+include "Alignment/CommonAlignmentProducer/data/GlobalPosition_Fake.cff"
 # DT with errors
 es_source fakeDTAlignmentSource = EmptyESSource {
     string recordName = "DTAlignmentRcd"
