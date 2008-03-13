@@ -5,9 +5,9 @@
 
 include "CalibMuon/DTCalibration/data/DT_Calibration.cff"
 replace maps_frontier.connect="frontier://FrontierDev/CMS_COND_DT"
-replace maps_frontier.toGet = {{string record = "DTT0Rcd" 
-                                string tag = "t0Fake_18X_Sept15" },
-                               {string record = "DTTtrigRcd"
-                                string tag ="ttrigFake_18X_July17"}}
+replace maps_frontier.toGet = {{string record = "DTT0Rcd"
+                               string tag = "t0Fake_20X_Sept15_mc" },
+                              {string record = "DTTtrigRcd"
+                               string tag ="ttrigFake_20X_July17_mc"}}
 
 #replace  DTParametrizedDriftAlgo_CSA07.recAlgoConfig.tTrigModeConfig.doT0Correction = true
