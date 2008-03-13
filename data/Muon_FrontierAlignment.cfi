@@ -9,10 +9,10 @@ include "Geometry/CSCGeometry/data/cscGeometry.cfi"
 es_source muonAlignment = PoolDBESSource { 
     using CondDBSetup
     VPSet toGet = {
-        { string record = "DTAlignmentRcd"           string tag = "DTIdealGeometry170" },
-        { string record = "DTAlignmentErrorRcd"      string tag = "DTIdealGeometryErrors170" },
-        { string record = "CSCAlignmentRcd"          string tag = "CSCIdealGeometry170" },
-        { string record = "CSCAlignmentErrorRcd"     string tag = "CSCIdealGeometryErrors170" }
+        { string record = "DTAlignmentRcd"           string tag = "DTIdealGeometry200_mc" },
+        { string record = "DTAlignmentErrorRcd"      string tag = "DTIdealGeometryErrors200_mc" },
+        { string record = "CSCAlignmentRcd"          string tag = "CSCIdealGeometry200_mc" },
+        { string record = "CSCAlignmentErrorRcd"     string tag = "CSCIdealGeometryErrors200_mc" }
     }
     string timetype = "runnumber"
     
