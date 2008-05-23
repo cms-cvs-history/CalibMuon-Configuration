@@ -1,1 +1,1 @@
-include "CalibMuon/RPCCalibration/data/rpcFakeCalib.cfi"
+include "CalibMuon/RPCCalibration/data/RPCFakeESProducer.cfi"
