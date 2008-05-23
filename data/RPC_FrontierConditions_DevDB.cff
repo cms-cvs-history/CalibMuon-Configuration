@@ -1,0 +1,7 @@
+#
+#RPC calibrations
+#For now, no t0 corrections are applied in the reconstruction if fake calibration is used
+#(the replace should be moved to main cfg in order to avoid warning message)
+
+include "CalibMuon/RPCCalibration/data/RPC_Calibration.cff"
+replace RPCCalibPerf.connect="frontier://FrontierDev/CMS_COND_RPC"
