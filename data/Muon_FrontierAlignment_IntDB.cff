@@ -2,5 +2,5 @@
 include "Alignment/CommonAlignmentProducer/data/GlobalPosition_Frontier_IntDB.cff"
 
 include "CalibMuon/Configuration/data/Muon_FrontierAlignment.cfi"
-replace muonAlignment.connect="frontier://cms_conditions_data/CMS_COND_20X_ALIGNMENT"
+replace muonAlignment.connect="frontier://FrontierInt/CMS_COND_21X_ALIGNMENT"
 

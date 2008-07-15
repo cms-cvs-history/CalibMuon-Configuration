@@ -2,9 +2,6 @@
 # Take muon alignment corrections from Frontier
 #
 include "CondCore/DBCommon/data/CondDBSetup.cfi"
-include "Geometry/DTGeometry/data/dtGeometry.cfi"
-include "Geometry/CSCGeometry/data/cscGeometry.cfi"
-
 
 es_source muonAlignment = PoolDBESSource { 
     using CondDBSetup
@@ -14,20 +11,11 @@ es_source muonAlignment = PoolDBESSource {
         { string record = "CSCAlignmentRcd"          string tag = "CSCIdealGeometry200_mc" },
         { string record = "CSCAlignmentErrorRcd"     string tag = "CSCIdealGeometryErrors200_mc" }
     }
-    string timetype = "runnumber"
     
     # FRONTIER
-    string connect="frontier://FrontierDev/CMS_COND_ALIGNMENT"
+    string connect="frontier://FrontierProd/CMS_COND_21X_ALIGNMENT"
     
     # ORACLE
-    #string connect = "oracle://cms_orcoff_int2r/CMS_COND_ALIGNMENT"
-
+    #string connect = "oracle://cms_orcoff_prod/CMS_COND_21X_ALIGNMENT"
 }
-
-es_prefer muonAlignment = PoolDBESSource {}
-
-# to apply misalignments
-replace DTGeometryESModule.applyAlignment = true
-replace CSCGeometryESModule.applyAlignment = true  
-
 
