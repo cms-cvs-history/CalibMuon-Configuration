@@ -1,9 +1,0 @@
-#
-#DT fake calibrations: es producer for t0 should introduce dependence of DTT0Rcd from geometry.
-#For now, no t0 corrections are applied in the reconstruction if fake calibration is used
-#(the replace should be moved to main cfg in order to avoid warning message)
-
-include "CalibMuon/DTCalibration/data/DTFakeTTrigESProducer.cfi"
-include "CalibMuon/DTCalibration/data/DTFakeT0ESProducer.cfi"
-
-
