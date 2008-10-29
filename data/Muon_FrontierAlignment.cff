@@ -1,5 +1,0 @@
-include "Alignment/CommonAlignmentProducer/data/GlobalPosition_Frontier.cff"
-
-include "CalibMuon/Configuration/data/Muon_FrontierAlignment.cfi"
-replace muonAlignment.connect="frontier://FrontierProd/CMS_COND_21X_ALIGNMENT"
-
