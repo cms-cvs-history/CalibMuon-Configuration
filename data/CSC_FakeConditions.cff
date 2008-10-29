@@ -1,4 +1,0 @@
-include "CalibMuon/CSCCalibration/data/CSCFakeGains.cfi"
-include "CalibMuon/CSCCalibration/data/CSCFakePedestals.cfi"
-include "CalibMuon/CSCCalibration/data/CSCFakeNoiseMatrix.cfi"
-include "CalibMuon/CSCCalibration/data/CSCFakeCrosstalk.cfi"
