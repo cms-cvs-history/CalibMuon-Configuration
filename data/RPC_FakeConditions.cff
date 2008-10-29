@@ -1,4 +1,0 @@
-#
-#RPC fake calibrations
-
-include "CalibMuon/RPCCalibration/data/RPCFakeESProducer.cfi"
